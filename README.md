@@ -116,4 +116,5 @@ others could be used, e.g. hosting the UI on a different hostname.
 [k3s-traefik-v2-kubernetes-crd]:
   https://github.com/sleighzy/k3s-traefik-v2-kubernetes-crd
 [minio]: https://min.io/
+[mit license]: https://img.shields.io/badge/License-MIT-blue.svg
 [storage]: https://docs.docker.com/registry/configuration/#storage
