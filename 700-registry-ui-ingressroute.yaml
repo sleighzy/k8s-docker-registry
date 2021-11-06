@@ -1,0 +1,30 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: registry-ui
+  namespace: registry
+
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`registry.mydomain.io`) && PathPrefix(`/ui`)
+    kind: Rule
+    services:
+      - name: registry-ui
+        port: 80
+    middlewares:
+      - name: stripprefix
+  tls:
+    certResolver: tlsresolver
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: stripprefix
+  namespace: registry
+spec:
+  stripPrefix:
+    prefixes:
+      - /ui
