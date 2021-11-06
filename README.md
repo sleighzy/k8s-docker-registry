@@ -98,6 +98,10 @@ as the registry. This path will be stripped off by the `stripprefix` middleware
 in the [700-registry-ui-ingressroute.yaml] file. This is just my approach,
 others could be used, e.g. hosting the UI on a different hostname.
 
+## License
+
+[![MIT license]](https://lbesson.mit-license.org/)
+
 [100-registry-secrets.yaml]: ./100-registry-secrets.yaml
 [200-registry-service.yaml]: ./200-registry-service.yaml
 [300-registry-deployment.yaml]: ./300-registry-deployment.yaml
